@@ -29,6 +29,7 @@
 
       const people = [
         "Beck, Glenn",
+        "Brooks, Eric",
         "Becker, Carl",
         "Beckett, Samuel",
         "Beddoes, Mick",
@@ -114,6 +115,7 @@
       const name = people.sort(function(lastOne, nextOne) {
         const [alast, afirst] = lastOne.split(", ");
         const [blast, bfirst] = nextOne.split(", ");
+        return [alast, afirst] > [blast, bfirst] ? 1 : -1;
       });
       console.table(name);
 
